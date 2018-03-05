@@ -1,16 +1,24 @@
 # Laravel 5.x Scaffold Generator
-[![Travis](https://img.shields.io/travis/laralib/l5scaffold.svg?style=flat-square)](https://github.com/laralib/l5scaffold)
-[![Packagist](https://img.shields.io/packagist/dt/laralib/l5scaffold.svg?style=flat-square)](https://packagist.org/packages/laralib/l5scaffold)
-[![Tag](https://img.shields.io/github/tag/laralib/l5scaffold.svg)](https://github.com/laralib/l5scaffold/tags)
 ## Usage
 
-### Step 1: Install Through Composer
+### Step 1: Add repo in composer.json
 
 ```
-composer require 'laralib/l5scaffold' --dev
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gomezdanielg/l5scaffold"
+        }
+    ],
 ```
 
-### Step 2: Add the Service Provider
+### Step 2: Install Through Composer
+
+```
+composer require 'gomezdanielg/l5scaffold' --dev
+```
+
+### Step 3: Add the Service Provider
 
 Open `config/app.php` and, to your **providers** array at the bottom, add:
 
@@ -18,7 +26,7 @@ Open `config/app.php` and, to your **providers** array at the bottom, add:
 Laralib\L5scaffold\GeneratorsServiceProvider::class
 ```
 
-### Step 3: Run Artisan!
+### Step 4: Run Artisan!
 
 You're all set. Run `php artisan` from the console, and you'll see the new commands `make:scaffold`.
 
